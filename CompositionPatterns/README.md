@@ -2,7 +2,7 @@ Aim:
 Looking at encapsulating code through compostion
 
 Notes:
-Encapsulation or 'hiding' of implementataion decouples code 
+Encapsulation or 'hiding' of implementation decouples code 
 and makes it easier to replace invidividual parts of the system 
 without having to update the system as a whole.
 
@@ -20,7 +20,7 @@ Details:
 - 2 classes of loan; 'ShortTermLoan' & 'LongTermLoan'
 - both classes have a 'loanDetails' property.
 - 'loanDetails' is an injected class that implements 'ILoanDetails'
-- each class of loan therefore knows that a contact exists.
+- each class of loan therefore knows that a contract exists
   with 'ILoanDeatils; such as it's 'loanDetails' property will have 
   a getDetails() method.
 - the loan class has no idea of the implementation of getDetails(), 
@@ -29,7 +29,7 @@ Details:
 
 ***Client2
 Instead of putting the 'decision' of how to implement getDetails() 
-into the loanDetails class use a factory to inject the appropriate 
+into a single loanDetails class use a factory to inject the appropriate 
 'loanDetails' class.
 
 Details:
@@ -40,7 +40,6 @@ Details:
 - Both 'ShortTermDetails' & 'LongTermDetails' implement 'ILoanDetailsBetter'
   therefore the loan classes know that a contract exists with their 
   'loanDetails' property to implement a getDetails() method.
-- 
 
 RUN THE CODE
 Client1.php
